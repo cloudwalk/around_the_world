@@ -5,15 +5,8 @@ MRuby for non embedded platforms to be compliance with DaFunk API.
 ## Setup
 
 1. Install Ruby
-
-2. rake
-
-
-## Docs (yard)
-
-1. Generate: `$ rake yard`
-2. Open: `open docs/index.html`
-
+2. rake setup
+3. rake
 
 ## Contributing
 
