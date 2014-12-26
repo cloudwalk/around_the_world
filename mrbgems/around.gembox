@@ -54,24 +54,21 @@ MRuby::GemBox.new do |conf|
   conf.gem :core => "mruby-toplevel-ext"
 
   # Use to Dir functions, used for mruby-require
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-hs-regexp")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-hs-regexp")
 
   # Use to TestUnit
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-mtest")
-
-  # Use to interpret posxml
-  # conf.gem File.join(MRUBY_PAX_MGEM, "mruby-posxml-parser")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-mtest")
 
   # Use to pack unpack functions
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-io")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-pack")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-sleep")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-polarssl")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-socket")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-dir")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-tempfile")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-require")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-qrcode")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-miniz")
-  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-json")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-io")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-pack")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sleep")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-polarssl")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-socket")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-dir")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-tempfile")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-require")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-qrcode")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-miniz")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-json")
 end

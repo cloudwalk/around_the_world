@@ -1,42 +1,42 @@
 [submodule "mrbgems/mruby-json"]
 	path = mrbgems/mruby-json
 	url = git@github.com:mattn/mruby-json.git
-[submodule "lib/mruby-polarssl"]
-	path = lib/mruby-polarssl
+[submodule "mrbgems/mruby-polarssl"]
+	path = mrbgems/mruby-polarssl
 	url = git@github.com:luisbebop/mruby-polarssl.git
-[submodule "lib/mruby-mtest"]
-	path = lib/mruby-mtest
+[submodule "mrbgems/mruby-mtest"]
+	path = mrbgems/mruby-mtest
 	url = git@github.com:iij/mruby-mtest.git
-[submodule "lib/mruby-pack"]
-	path = lib/mruby-pack
+[submodule "mrbgems/mruby-pack"]
+	path = mrbgems/mruby-pack
 	url = git@github.com:iij/mruby-pack.git
-[submodule "lib/mruby-io"]
-	path = lib/mruby-io
+[submodule "mrbgems/mruby-io"]
+	path = mrbgems/mruby-io
 	url = git@github.com:cloudwalkio/mruby-io.git
-[submodule "lib/mruby-qrcode"]
-	path = lib/mruby-qrcode
+[submodule "mrbgems/mruby-qrcode"]
+	path = mrbgems/mruby-qrcode
 	url = git@github.com:sadasant/mruby-qrcode.git
-[submodule "lib/mruby-socket"]
-	path = lib/mruby-socket
+[submodule "mrbgems/mruby-socket"]
+	path = mrbgems/mruby-socket
 	url = git@github.com:iij/mruby-socket.git
-[submodule "lib/mruby-sleep"]
-	path = lib/mruby-sleep
+[submodule "mrbgems/mruby-sleep"]
+	path = mrbgems/mruby-sleep
 	url = git@github.com:matsumoto-r/mruby-sleep.git
-[submodule "lib/mruby-dir"]
-	path = lib/mruby-dir
+[submodule "mrbgems/mruby-dir"]
+	path = mrbgems/mruby-dir
 	url = git@github.com:cloudwalkio/mruby-dir.git
-[submodule "lib/mruby-tempfile"]
-	path = lib/mruby-tempfile
+[submodule "mrbgems/mruby-tempfile"]
+	path = mrbgems/mruby-tempfile
 	url = git@github.com:iij/mruby-tempfile.git
-[submodule "lib/mruby-require"]
-	path = lib/mruby-require
+[submodule "mrbgems/mruby-require"]
+	path = mrbgems/mruby-require
 	url = git@github.com:iij/mruby-require.git
-[submodule "lib/mruby-miniz"]
-	path = lib/mruby-miniz
+[submodule "mrbgems/mruby-miniz"]
+	path = mrbgems/mruby-miniz
 	url = git@github.com:scalone/mruby-miniz.git
-[submodule "lib/mruby-json"]
-	path = lib/mruby-json
+[submodule "mrbgems/mruby-json"]
+	path = mrbgems/mruby-json
 	url = git@github.com:mattn/mruby-json.git
-[submodule "lib/mruby-hs-regexp"]
-	path = lib/mruby-hs-regexp
+[submodule "mrbgems/mruby-hs-regexp"]
+	path = mrbgems/mruby-hs-regexp
 	url = git@github.com:masamitsu-murase/mruby-hs-regexp.git
