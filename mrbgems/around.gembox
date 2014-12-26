@@ -1,0 +1,77 @@
+MRuby::GemBox.new do |conf|
+  # Use standard Kernel#sprintf method
+  conf.gem :core => "mruby-sprintf"
+
+  # Use standard print/puts/p
+  conf.gem :core => "mruby-print"
+
+  # Use standard Math module
+  conf.gem :core => "mruby-math"
+
+  # Use standard Time class
+  conf.gem :core => "mruby-time"
+
+  # Use standard Struct class
+  conf.gem :core => "mruby-struct"
+
+  # Use extensional Enumerable module
+  conf.gem :core => "mruby-enum-ext"
+
+  # Use extensional String class
+  conf.gem :core => "mruby-string-ext"
+
+  # Use extensional Numeric class
+  conf.gem :core => "mruby-numeric-ext"
+
+  # Use extensional Array class
+  conf.gem :core => "mruby-array-ext"
+
+  # Use extensional Hash class
+  conf.gem :core => "mruby-hash-ext"
+
+  # Use extensional Range class
+  conf.gem :core => "mruby-range-ext"
+
+  # Use extensional Proc class
+  conf.gem :core => "mruby-proc-ext"
+
+  # Use extensional Symbol class
+  conf.gem :core => "mruby-symbol-ext"
+
+  # Use Random class
+  conf.gem :core => "mruby-random"
+
+  # Use extensional Object class
+  conf.gem :core => "mruby-object-ext"
+
+  # Use ObjectSpace class
+  conf.gem :core => "mruby-objectspace"
+
+  # Use Fiber class
+  conf.gem :core => "mruby-fiber"
+
+  # Use extended toplevel object (main) methods
+  conf.gem :core => "mruby-toplevel-ext"
+
+  # Use to Dir functions, used for mruby-require
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-hs-regexp")
+
+  # Use to TestUnit
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-mtest")
+
+  # Use to interpret posxml
+  # conf.gem File.join(MRUBY_PAX_MGEM, "mruby-posxml-parser")
+
+  # Use to pack unpack functions
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-io")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-pack")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-sleep")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-polarssl")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-socket")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-dir")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-tempfile")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-require")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-qrcode")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-miniz")
+  conf.gem File.join(MRUBY_PAX_MGEM, "mruby-json")
+end
