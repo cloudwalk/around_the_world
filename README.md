@@ -7,8 +7,8 @@ MRuby for non embedded platforms to be compliance with DaFunk API.
 1. Install Ruby
 
 2. rake
-	
-	
+
+
 ## Docs (yard)
 
 1. Generate: `$ rake yard`
