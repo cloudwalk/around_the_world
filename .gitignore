@@ -1,0 +1,8 @@
+.yardoc/*
+_yardoc/*
+doc/*
+rdoc/*
+coverage/*
+stats
+stats/*
+*.o
