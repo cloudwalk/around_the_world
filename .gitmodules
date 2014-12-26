@@ -37,3 +37,6 @@
 [submodule "mrbgems/mruby-hs-regexp"]
 	path = mrbgems/mruby-hs-regexp
 	url = git@github.com:masamitsu-murase/mruby-hs-regexp.git
+[submodule "mrbgems/mruby-io"]
+	path = mrbgems/mruby-io
+	url = git@github.com:iij/mruby-io.git
