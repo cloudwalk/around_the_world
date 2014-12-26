@@ -10,9 +10,6 @@
 [submodule "mrbgems/mruby-pack"]
 	path = mrbgems/mruby-pack
 	url = git@github.com:iij/mruby-pack.git
-[submodule "mrbgems/mruby-io"]
-	path = mrbgems/mruby-io
-	url = git@github.com:cloudwalkio/mruby-io.git
 [submodule "mrbgems/mruby-qrcode"]
 	path = mrbgems/mruby-qrcode
 	url = git@github.com:sadasant/mruby-qrcode.git
