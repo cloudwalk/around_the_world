@@ -1,8 +1,8 @@
 require 'fileutils'
-require 'rake/clean'
 
-AROUND_ROOT = ENV["AROUND_ROOT"] || File.join(File.dirname(File.expand_path(__FILE__)))
-MRUBY_ROOT  = File.join(AROUND_ROOT, "mruby")
+AROUND_ROOT        = ENV["AROUND_ROOT"] || File.join(File.dirname(File.expand_path(__FILE__)))
+AROUND_MRUBY_ROOT  = File.join(AROUND_ROOT, "mruby")
+AROUND_GEMBOX_ROOT = File.join(AROUND_ROOT, "mrbgems")
 
 if ENV["MRUBY_CONFIG"]
   MRuby::Build.new do |conf|
@@ -15,22 +15,33 @@ if ENV["MRUBY_CONFIG"]
       toolchain :gcc
     end
 
-    conf.gembox File.join(AROUND_ROOT, "mrbgems", "around.box")
+    conf.gembox File.join(AROUND_ROOT, "mrbgems", "around")
   end
-end
+else
+  task :default => :build
 
-desc "Setup env"
-task :env do
-  FileUtils.cd MRUBY_ROOT
-  ENV["MRUBY_CONFIG"] = File.expand_path(__FILE__)
-end
+  desc "Setup env"
+  task :env do
+    FileUtils.cd AROUND_MRUBY_ROOT
+    ENV["MRUBY_CONFIG"] = File.expand_path(__FILE__)
+  end
 
-desc "Build"
-task :build => :env do
-  exit sh("rake")
-end
+  desc "Build"
+  task :build => :env do
+    exit sh("rake")
+  end
 
-desc "Clean"
-task :clean => :env do
-  exit sh("rake clean")
+  desc "Clean"
+  task :clean => :env do
+    exit sh("rake clean")
+  end
+
+  desc "Setup Project and Submodules"
+  task :setup do
+    sh "git submodule init"
+    sh "git submodule update"
+    FileUtils.cd File.join(AROUND_GEMBOX_ROOT, "mruby-qrcode")
+    sh "git submodule init"
+    exit sh "git submodule update"
+  end
 end
