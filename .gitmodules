@@ -40,3 +40,6 @@
 [submodule "mrbgems/mruby-io"]
 	path = mrbgems/mruby-io
 	url = git@github.com:iij/mruby-io.git
+[submodule "mrbgems/mruby-msgpack"]
+	path = mrbgems/mruby-msgpack
+	url = git@github.com:scalone/mruby-msgpack.git

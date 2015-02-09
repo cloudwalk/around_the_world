@@ -71,4 +71,5 @@ MRuby::GemBox.new do |conf|
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-qrcode")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-miniz")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-json")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-msgpack")
 end
