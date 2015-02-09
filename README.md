@@ -28,7 +28,7 @@ Follow Main sample to start the MRuby runtime
 
 int main(int argc, char **argv)
 {
-	mrb_state *mrb;
+  mrb_state *mrb;
   mrbc_context *c;
   char code[] = "puts \"Hello World\"";
 
