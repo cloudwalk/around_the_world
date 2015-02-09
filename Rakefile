@@ -25,7 +25,7 @@ else
     FileUtils.cd AROUND_MRUBY_ROOT
 
     if ENV["CONFIG"]
-      File.join(File.expand_path(File.dirname(__FILE__)), ENV["CONFIG"])
+      ENV["MRUBY_CONFIG"] = File.join(File.expand_path(File.dirname(__FILE__)), ENV["CONFIG"])
     else
       ENV["MRUBY_CONFIG"] = File.expand_path(__FILE__)
     end
