@@ -4,7 +4,7 @@ AROUND_ROOT        = ENV["AROUND_ROOT"] || File.join(File.dirname(File.expand_pa
 AROUND_MRUBY_ROOT  = File.join(AROUND_ROOT, "mruby")
 AROUND_GEMBOX_ROOT = File.join(AROUND_ROOT, "mrbgems")
 
-if ENV["MRUBY_CONFIG"]
+if ENV["MRUBY_CONFIG"] == File.expand_path(__FILE__)
   MRuby::Build.new do |conf|
     # load specific toolchain settings
 
@@ -23,7 +23,12 @@ else
   desc "Setup env"
   task :env do
     FileUtils.cd AROUND_MRUBY_ROOT
-    ENV["MRUBY_CONFIG"] = File.expand_path(__FILE__)
+
+    if ENV["CONFIG"]
+      File.join(File.expand_path(File.dirname(__FILE__)), ENV["CONFIG"])
+    else
+      ENV["MRUBY_CONFIG"] = File.expand_path(__FILE__)
+    end
   end
 
   desc "Build"
