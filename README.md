@@ -6,7 +6,7 @@ MRuby for non embedded platforms to be compliance with DaFunk API.
 
 1. Install Ruby
 2. Setup submodules `rake setup`
-3. Create build.rb, see [Docs](https://github.com/mruby/mruby/tree/1.0.0/doc/compile) and [Sample](https://github.com/mruby/mruby/blob/1.0.0/build_config.rb)
+3. Create build.rb, see [Docs](https://github.com/mruby/mruby/tree/1.0.0/doc/compile), [Sample Cross Compilation](https://github.com/cloudwalkio/around_the_world/blob/master/build.rb) and [Sample MRuby](https://github.com/mruby/mruby/blob/1.0.0/build_config.rb)
 4. Build `CONFIG=build.rb rake`
 
 ## Contributing
