@@ -31,13 +31,22 @@ else
     end
   end
 
-  desc "Build"
-  task :build => :env do
-    exit sh("rake")
+  desc "Compile MRuby"
+  task :mruby => :env do
+    sh("rake")
+  end
+
+  desc "Compile src/main.c linking libmruby.a"
+  task :build => :mruby do
+    FileUtils.cd AROUND_ROOT
+    FileUtils.rm_rf "out"
+    FileUtils.mkdir_p "out"
+    sh("gcc -o out/main.o -I mruby/include/ -m32 mruby/build/32bit/lib/libmruby.a src/main.c")
   end
 
   desc "Clean"
   task :clean => :env do
+    FileUtils.rm_rf File.join(AROUND_ROOT, "out")
     exit sh("rake clean")
   end
 
