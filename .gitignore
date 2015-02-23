@@ -6,3 +6,4 @@ coverage/*
 stats
 stats/*
 *.o
+out/*
