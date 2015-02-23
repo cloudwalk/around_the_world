@@ -20,6 +20,11 @@ if ENV["MRUBY_CONFIG"] == File.expand_path(__FILE__)
 else
   task :default => :build
 
+  desc "Execute Sample"
+  task :execute => :build do
+    exit sh("./out/sample")
+  end
+
   desc "Setup env"
   task :env do
     FileUtils.cd AROUND_MRUBY_ROOT
@@ -41,7 +46,7 @@ else
     FileUtils.cd AROUND_ROOT
     FileUtils.rm_rf "out"
     FileUtils.mkdir_p "out"
-    sh("gcc -o out/main.o -I mruby/include/ -m32 mruby/build/32bit/lib/libmruby.a src/main.c")
+    sh("gcc -o out/sample -I mruby/include/ -m32 mruby/build/32bit/lib/libmruby.a src/main.c")
   end
 
   desc "Clean"
