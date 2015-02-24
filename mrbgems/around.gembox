@@ -73,4 +73,5 @@ MRuby::GemBox.new do |conf|
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-json")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-msgpack")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-cloudwalk-platform")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-context")
 end
