@@ -49,3 +49,6 @@
 [submodule "mrbgems/mruby-context"]
 	path = mrbgems/mruby-context
 	url = git@github.com:scalone/mruby-context.git
+[submodule "lib/main"]
+	path = lib/main
+	url = git@github.com:cloudwalkio/main.git

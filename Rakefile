@@ -3,6 +3,7 @@ require 'fileutils'
 AROUND_ROOT        = ENV["AROUND_ROOT"] || File.join(File.dirname(File.expand_path(__FILE__)))
 AROUND_MRUBY_ROOT  = File.join(AROUND_ROOT, "mruby")
 AROUND_GEMBOX_ROOT = File.join(AROUND_ROOT, "mrbgems")
+AROUND_MAIN_ROOT  = File.join(AROUND_ROOT, "lib", "main")
 
 if ENV["MRUBY_CONFIG"] == File.expand_path(__FILE__)
   MRuby::Build.new do |conf|
@@ -22,7 +23,8 @@ else
 
   desc "Execute Sample"
   task :execute => :build do
-    exit sh("./out/sample")
+    FileUtils.cd File.join(AROUND_ROOT, "out")
+    exit sh("./sample")
   end
 
   desc "Setup env"
@@ -43,9 +45,13 @@ else
 
   desc "Compile src/main.c linking libmruby.a"
   task :build => :mruby do
+    FileUtils.cd AROUND_MAIN_ROOT
+    sh("bundle install")
+    sh("rake")
     FileUtils.cd AROUND_ROOT
     FileUtils.rm_rf "out"
     FileUtils.mkdir_p "out"
+    FileUtils.cp_r File.join(AROUND_MAIN_ROOT, "out", "main"), "out/"
     sh("gcc -o out/sample -I mruby/include/ -m32 mruby/build/32bit/lib/libmruby.a src/main.c")
   end
 
