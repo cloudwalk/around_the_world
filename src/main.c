@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
   mrb_state *mrb;
   mrbc_context *c;
-  char code[] = "puts \"Hello World\"; puts Platform::System.serial";
+  char code[] = "Context.start(\"main\", \"Platform\")";
 
   mrb = mrb_open();
   c   = mrbc_context_new(mrb);
