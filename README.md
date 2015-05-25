@@ -2,6 +2,11 @@
 
 MRuby for non embedded platforms to be compliance with DaFunk API.
 
+# Map
+
+![Map](imgs/apps.jpg)
+
+
 ## Setup
 
 1. Install Ruby
