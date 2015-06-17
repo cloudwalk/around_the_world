@@ -73,6 +73,10 @@ else
     sh "git submodule update"
     FileUtils.cd File.join(AROUND_GEMBOX_ROOT, "mruby-qrcode")
     sh "git submodule init"
-    exit sh "git submodule update"
+    sh "git submodule update"
+    FileUtils.cd File.join(AROUND_GEMBOX_ROOT, "mruby-polarssl")
+    sh "git submodule init"
+    sh "git submodule update"
+    exit
   end
 end
