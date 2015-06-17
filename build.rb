@@ -24,6 +24,7 @@ MRuby::Build.new do |conf|
   # include the default GEMs
   #conf.gembox 'default'
   conf.gembox File.join(AROUND_ROOT, "mrbgems", "around")
+  conf.cc.defines = %w(SHA256_DIGEST_LENGTH=32 SHA512_DIGEST_LENGTH=64)
 
   # C compiler settings
   # conf.cc do |cc|
