@@ -67,3 +67,6 @@
 [submodule "mrbgems/mruby-sha1"]
 	path = mrbgems/mruby-sha1
 	url = git@github.com:scalone/mruby-sha1.git
+[submodule "mrbgems/mruby-bignum"]
+	path = mrbgems/mruby-bignum
+	url = git@github.com:chasonr/mruby-bignum.git
