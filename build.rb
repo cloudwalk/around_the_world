@@ -23,7 +23,7 @@ MRuby::Build.new do |conf|
 
   # include the default GEMs
   #conf.gembox 'default'
-  #conf.gembox File.join(AROUND_ROOT, "mrbgems", "around")
+  conf.gembox File.join(AROUND_ROOT, "mrbgems", "around")
 
   # C compiler settings
   # conf.cc do |cc|
