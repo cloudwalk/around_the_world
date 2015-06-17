@@ -50,16 +50,31 @@ MRuby::GemBox.new do |conf|
   # Use Fiber class
   conf.gem :core => "mruby-fiber"
 
+  # Use Enumerator class (require mruby-fiber)
+  conf.gem :core => "mruby-enumerator"
+
+  # Use Enumerable::Lazy class (require mruby-enumerator)
+  conf.gem :core => "mruby-enum-lazy"
+
   # Use extended toplevel object (main) methods
   conf.gem :core => "mruby-toplevel-ext"
 
   # Use to Dir functions, used for mruby-require
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-hs-regexp")
+  # Generate mirb command
+  conf.gem :core => "mruby-bin-mirb"
 
   # Use to TestUnit
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-mtest")
+  # Generate mruby command
+  conf.gem :core => "mruby-bin-mruby"
+
+  # Generate mruby-strip command
+  conf.gem :core => "mruby-bin-strip"
 
   # Use to pack unpack functions
+  # Use extensional Kernel module
+  conf.gem :core => "mruby-kernel-ext"
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-io")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-pack")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sleep")
