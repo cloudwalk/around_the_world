@@ -12,6 +12,8 @@ MRuby::Build.new do |conf|
     toolchain :gcc
   end
 
+  enable_debug
+
   # Use mrbgems
   # conf.gem 'examples/mrbgems/ruby_extension_example'
   # conf.gem 'examples/mrbgems/c_extension_example' do |g|
@@ -87,6 +89,8 @@ end
 # Define cross build settings
 MRuby::CrossBuild.new('32bit') do |conf|
   toolchain :gcc
+
+  enable_debug
 
   conf.cc.flags << "-m32"
   conf.linker.flags << "-m32"
