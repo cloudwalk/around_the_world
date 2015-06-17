@@ -75,4 +75,5 @@ MRuby::GemBox.new do |conf|
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-cloudwalk-platform")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-context")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-base58")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-ripemd")
 end
