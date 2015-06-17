@@ -1,6 +1,6 @@
 [submodule "mruby"]
 	path = mruby
-	url = git@github.com:mruby/mruby.git
+	url = git@github.com:chasonr/mruby.git
 [submodule "mrbgems/mruby-polarssl"]
 	path = mrbgems/mruby-polarssl
 	url = git@github.com:luisbebop/mruby-polarssl.git
