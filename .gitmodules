@@ -58,3 +58,6 @@
 [submodule "mrbgems/mruby-ripemd"]
 	path = mrbgems/mruby-ripemd
 	url = git@github.com:scalone/mruby-ripemd.git
+[submodule "mrbgems/mruby-digest"]
+	path = mrbgems/mruby-digest
+	url = git@github.com:iij/mruby-digest.git
