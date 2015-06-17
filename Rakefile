@@ -62,6 +62,11 @@ else
     exit sh("rake clean")
   end
 
+  desc "Test"
+  task :test => :env do
+    exit sh("rake test")
+  end
+
   desc "Setup Project and Submodules"
   task :setup do
     sh "git submodule init"
