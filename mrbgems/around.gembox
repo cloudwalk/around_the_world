@@ -78,4 +78,5 @@ MRuby::GemBox.new do |conf|
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-ripemd")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-digest")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sha2")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sha1")
 end

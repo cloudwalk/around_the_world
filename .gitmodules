@@ -64,3 +64,6 @@
 [submodule "mrbgems/mruby-sha2"]
 	path = mrbgems/mruby-sha2
 	url = git@github.com:h2so5/mruby-sha2.git
+[submodule "mrbgems/mruby-sha1"]
+	path = mrbgems/mruby-sha1
+	url = git@github.com:scalone/mruby-sha1.git
