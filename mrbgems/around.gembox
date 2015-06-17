@@ -59,41 +59,39 @@ MRuby::GemBox.new do |conf|
   # Use extended toplevel object (main) methods
   conf.gem :core => "mruby-toplevel-ext"
 
-  # Use to Dir functions, used for mruby-require
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-hs-regexp")
   # Generate mirb command
   conf.gem :core => "mruby-bin-mirb"
 
-  # Use to TestUnit
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-mtest")
   # Generate mruby command
   conf.gem :core => "mruby-bin-mruby"
 
   # Generate mruby-strip command
   conf.gem :core => "mruby-bin-strip"
 
-  # Use to pack unpack functions
   # Use extensional Kernel module
   conf.gem :core => "mruby-kernel-ext"
+
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-hs-regexp")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-io")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-pack")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sleep")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-polarssl")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-socket")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-dir")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-tempfile")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-require")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-mtest")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-socket")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-pack")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-polarssl")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-qrcode")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-miniz")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-json")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sleep")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-msgpack")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-cloudwalk-platform")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-json")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-context")
-  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-base58")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-cloudwalk-platform")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-ripemd")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-digest")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sha2")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sha1")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-base58")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-bignum")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-simple-random")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-mock")
