@@ -81,4 +81,5 @@ MRuby::GemBox.new do |conf|
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-sha1")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-bignum")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-simple-random")
+  conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-mock")
 end

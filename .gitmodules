@@ -73,3 +73,6 @@
 [submodule "mrbgems/mruby-simple-random"]
 	path = mrbgems/mruby-simple-random
 	url = git@github.com:iij/mruby-simple-random.git
+[submodule "mrbgems/mruby-mock"]
+	path = mrbgems/mruby-mock
+	url = git@github.com:iij/mruby-mock.git
