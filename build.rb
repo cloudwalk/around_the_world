@@ -26,7 +26,12 @@ MRuby::Build.new do |conf|
   # include the default GEMs
   #conf.gembox 'default'
   conf.gembox File.join(AROUND_ROOT, "mrbgems", "around")
-  conf.cc.defines = %w(SHA256_DIGEST_LENGTH=32 SHA512_DIGEST_LENGTH=64)
+  conf.cc.defines << %w(SHA256_DIGEST_LENGTH=32 SHA512_DIGEST_LENGTH=64 MRB_STACK_EXTEND_DOUBLING)
+  if RUBY_PLATFORM =~ /x86_64-linux/i
+  elsif RUBY_PLATFORM =~ /linux/i
+    conf.cc.flags << %w(-msse2)
+    conf.linker.flags << %w(-msse2)
+  end
 
   # C compiler settings
   # conf.cc do |cc|
@@ -92,8 +97,13 @@ MRuby::CrossBuild.new('32bit') do |conf|
 
   enable_debug
 
-  conf.cc.flags << "-m32"
-  conf.linker.flags << "-m32"
+  conf.cc.defines << %w(SHA256_DIGEST_LENGTH=32 SHA512_DIGEST_LENGTH=64 MRB_STACK_EXTEND_DOUBLING)
+
+  if RUBY_PLATFORM =~ /x86_64-linux/i
+  elsif RUBY_PLATFORM =~ /linux/i
+    conf.cc.flags << %w(-msse2)
+    conf.linker.flags << %w(-msse2)
+  end
 
   conf.gembox File.join(AROUND_ROOT, "mrbgems", "around")
 end
