@@ -92,7 +92,7 @@ MRuby::Build.new do |conf|
 end
 
 # Define cross build settings
-MRuby::CrossBuild.new('32bit') do |conf|
+MRuby::CrossBuild.new('device') do |conf|
   toolchain :gcc
 
   enable_debug

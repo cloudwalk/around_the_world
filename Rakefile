@@ -54,7 +54,7 @@ else
     FileUtils.mkdir_p "out"
     FileUtils.cp_r File.join(AROUND_MAIN_ROOT, "out", "main"), "out/"
     FileUtils.cp_r File.join(AROUND_MAIN_ROOT, "out", "shared"), "out/"
-    sh("gcc src/main.c -o out/sample mruby/build/32bit/lib/libmruby.a -Imruby/include -lm")
+    sh("gcc src/main.c -o out/sample mruby/build/device/lib/libmruby.a -Imruby/include -lm")
   end
 
   desc "Clean"
