@@ -46,6 +46,7 @@ else
   desc "Compile src/main.c linking libmruby.a"
   task :build => :mruby do
     FileUtils.cd AROUND_MAIN_ROOT
+    ENV["MRBC"] ||= File.join(AROUND_MRUBY_ROOT, "bin", "mrbc")
     sh("bundle install")
     sh("rake")
     FileUtils.cd AROUND_ROOT
