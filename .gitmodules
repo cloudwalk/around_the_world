@@ -54,7 +54,7 @@
 	url = git@github.com:cloudwalkio/main.git
 [submodule "mrbgems/mruby-base58"]
 	path = mrbgems/mruby-base58
-	url = git@github.com:h2so5/mruby-base58.git
+        url = git@github.com:scalone/mruby-base58.git
 [submodule "mrbgems/mruby-ripemd"]
 	path = mrbgems/mruby-ripemd
 	url = git@github.com:scalone/mruby-ripemd.git
