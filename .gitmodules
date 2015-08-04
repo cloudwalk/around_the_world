@@ -76,3 +76,6 @@
 [submodule "mrbgems/mruby-mock"]
 	path = mrbgems/mruby-mock
 	url = git@github.com:iij/mruby-mock.git
+[submodule "mrbgems/mruby-hmac"]
+	path = mrbgems/mruby-hmac
+	url = git@github.com:scalone/mruby-hmac.git
