@@ -70,8 +70,7 @@ else
 
   desc "Setup Project and Submodules"
   task :setup do
-    sh "git submodule init"
-    sh "git submodule update --recursive"
+    sh "git submodule update --init --recursive"
     exit
   end
 end
