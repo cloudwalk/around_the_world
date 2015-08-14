@@ -21,7 +21,7 @@
 	url = git@github.com:matsumoto-r/mruby-sleep.git
 [submodule "mrbgems/mruby-dir"]
 	path = mrbgems/mruby-dir
-	url = git@github.com:cloudwalkio/mruby-dir.git
+	url = git@github.com:iij/mruby-dir.git
 [submodule "mrbgems/mruby-tempfile"]
 	path = mrbgems/mruby-tempfile
 	url = git@github.com:iij/mruby-tempfile.git
