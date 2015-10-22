@@ -3,7 +3,7 @@ require 'fileutils'
 AROUND_ROOT        = ENV["AROUND_ROOT"] || File.join(File.dirname(File.expand_path(__FILE__)))
 AROUND_MRUBY_ROOT  = File.join(AROUND_ROOT, "mruby")
 AROUND_GEMBOX_ROOT = File.join(AROUND_ROOT, "mrbgems")
-AROUND_MAIN_ROOT  = File.join(AROUND_ROOT, "lib", "main")
+AROUND_MAIN_ROOT   = File.join(AROUND_ROOT, "lib", "main")
 
 if ENV["MRUBY_CONFIG"] == File.expand_path(__FILE__)
   MRuby::Build.new do |conf|
@@ -43,8 +43,8 @@ else
     sh("rake")
   end
 
-  desc "Compile src/main.c linking libmruby.a"
-  task :build => :mruby do
+  desc "Compile Main and Create package"
+  task :main_rb do
     FileUtils.cd AROUND_MAIN_ROOT
     ENV["MRBC"] ||= File.join(AROUND_MRUBY_ROOT, "bin", "mrbc")
     sh("bundle install")
@@ -54,6 +54,15 @@ else
     FileUtils.mkdir_p "out"
     FileUtils.cp_r File.join(AROUND_MAIN_ROOT, "out", "main"), "out/"
     FileUtils.cp_r File.join(AROUND_MAIN_ROOT, "out", "shared"), "out/"
+    sh("#{ENV["MRBC"]} -g -o #{File.join(AROUND_ROOT, "out", "main", "platform.mrb")} #{File.join(AROUND_ROOT, "lib", "platform.rb")}")
+  end
+
+  desc "Compile src/main.c linking libmruby.a"
+  task :build => [:mruby, :main]
+
+  desc "Compile src/main.c linking libmruby.a"
+  task :main_c do
+    FileUtils.cd AROUND_ROOT
     sh("gcc src/main.c -o out/sample mruby/build/device/lib/libmruby.a -Imruby/include -lm")
   end
 
