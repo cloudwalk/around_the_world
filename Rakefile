@@ -58,7 +58,7 @@ else
   end
 
   desc "Compile src/main.c linking libmruby.a"
-  task :build => [:mruby, :main]
+  task :build => [:mruby, :main_rb]
 
   desc "Compile src/main.c linking libmruby.a"
   task :main_c do
