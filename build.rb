@@ -33,6 +33,15 @@ MRuby::Build.new do |conf|
     conf.linker.flags << %w(-msse2)
   end
 
+  # Generate mirb command
+  conf.gem :core => "mruby-bin-mirb"
+
+  # Generate mruby command
+  conf.gem :core => "mruby-bin-mruby"
+
+  # Generate mruby-strip command
+  conf.gem :core => "mruby-bin-strip"
+
   # C compiler settings
   # conf.cc do |cc|
   #   cc.command = ENV['CC'] || 'gcc'
