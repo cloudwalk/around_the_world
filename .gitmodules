@@ -76,3 +76,6 @@
 [submodule "mrbgems/mruby-hmac"]
 	path = mrbgems/mruby-hmac
 	url = git@github.com:scalone/mruby-hmac.git
+[submodule "mrbgems/mruby-tinyxml2"]
+	path = mrbgems/mruby-tinyxml2
+	url = git@github.com:h2so5/mruby-tinyxml2.git
