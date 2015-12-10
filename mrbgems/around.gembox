@@ -73,7 +73,6 @@ MRuby::GemBox.new do |conf|
 
   conf.gem :core => "mruby-eval"
   conf.gem :core => "mruby-exit"
-  conf.gem :core => "mruby-string-utf8"
 
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-hs-regexp")
   conf.gem File.join(AROUND_GEMBOX_ROOT, "mruby-io")
