@@ -3,6 +3,7 @@ AROUND_MRUBY_ROOT  = File.join(AROUND_ROOT, "mruby")
 AROUND_GEMBOX_ROOT = File.join(AROUND_ROOT, "mrbgems")
 
 MRuby::Build.new do |conf|
+  conf.define_singleton_method(:host_target) { "" }
   # load specific toolchain settings
 
   # Gets set by the VS command prompts.
@@ -102,6 +103,7 @@ end
 
 # Define cross build settings
 MRuby::CrossBuild.new('device') do |conf|
+  conf.define_singleton_method(:host_target) { "" }
   toolchain :gcc
 
   enable_debug
