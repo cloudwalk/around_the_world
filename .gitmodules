@@ -79,3 +79,6 @@
 [submodule "mrbgems/mruby-tinyxml2"]
 	path = mrbgems/mruby-tinyxml2
 	url = git@github.com:h2so5/mruby-tinyxml2.git
+[submodule "mrbgems/mruby-emv"]
+	path = mrbgems/mruby-emv
+	url = git@github.com:cloudwalkio/mruby-emv.git
