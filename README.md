@@ -25,3 +25,6 @@ MRuby for non embedded platforms to be compliance with DaFunk API.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## License
+
+This project is released under the [MIT License](https://opensource.org/licenses/MIT).
